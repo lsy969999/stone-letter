@@ -1,44 +1,42 @@
 //
-//  AdmobInterstitial.swift
+//  AdmobRewarded.swift
 //  stone-letter
 //
-//  Created by SY L on 1/17/24.
+//  Created by SY L on 1/18/24.
 //
 
 import Foundation
 import GoogleMobileAds
-class AdmobInterstitial: NSObject, FullScreenAd, GADFullScreenContentDelegate {
+class AdmobRewarded: NSObject, FullScreenAd, GADFullScreenContentDelegate {
     var id: String = UUID().uuidString
     var platform: AdPlatform = .admob
-    var type: FullScreenAdType = .interstitial
+    var type: FullScreenAdType = .rewarded
     var callbackDelegate: FullscreenAdCallback
     var context: UIViewController
     var status: AdStatus = .none
     var adLoaded: Int?
-    private var ad: GADInterstitialAd?
+    private var ad: GADRewardedAd?
     
     init(context: UIViewController, callbackDelegate: FullscreenAdCallback) {
         self.context = context
         self.callbackDelegate = callbackDelegate
     }
     
-    //"ca-app-pub-3940256099942544/4411468910"
     func load(adKey: String) {
-        self.status = .loading
         let request = GADRequest()
-        GADInterstitialAd.load(withAdUnitID: adKey, request: request){ [self] ad, error in
+        GADRewardedAd.load(withAdUnitID: adKey, request: request){ [self] ad, error in
             if let error = error {
                 let err = error.localizedDescription;
-                print("Failed to load interstitial ad with error: \(err)")
+                print("Failed to load rewarded ad with error: \(err)")
                 self.callbackDelegate.onLoadFail(id: id, platform: platform, type: type, error: err);
-              return
-            }
+                return
+              }
             self.ad = ad
             self.ad?.fullScreenContentDelegate = self
             self.status = .loaded
             self.adLoaded = Int(Date.now.timeIntervalSince1970) * 1000
             self.callbackDelegate.onLoadSuccess(id: id, platform: platform, type: type)
-          }
+        }
     }
     
     func show() {
@@ -46,7 +44,12 @@ class AdmobInterstitial: NSObject, FullScreenAd, GADFullScreenContentDelegate {
             print("\(#function) ad is nil")
             return;
         }
-        ad.present(fromRootViewController: self.context)
+        ad.present(fromRootViewController: self.context) { 
+            let reward = ad.adReward
+            let amountDouble = reward.amount.doubleValue
+            print("Reward received with currency \(reward.amount), amount \(amountDouble)")
+            self.callbackDelegate.onRewarded(id: self.id, platform: self.platform, type: self.type, amount: amountDouble)
+        }
     }
     
     func info() -> FullScreenAdInfo {

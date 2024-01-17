@@ -23,7 +23,7 @@ class FullScreenAdSelector: FullscreenAdSelector, FullscreenAdCallback {
         switch (platform, type) {
         case (.admob, .interstitial): return true
         case (.admob, .rewarded): return true
-        case (.admob, .native): return true
+        case (.admob, .native): return false
         case (.admob, .mrec): return false
         default:
             return false
@@ -36,7 +36,7 @@ class FullScreenAdSelector: FullscreenAdSelector, FullscreenAdCallback {
             return
         }
         
-        guard self.countFullscreenAd(platform: platform, type: type, status: []) <= maxDupCnt  else {
+        guard self.countFullscreenAd(platform: platform, type: type, status: []) < maxDupCnt  else {
             print("\(#function) platform: \(platform), type: \(type) is max Dup Cnt")
             return
         }
@@ -69,6 +69,8 @@ class FullScreenAdSelector: FullscreenAdSelector, FullscreenAdCallback {
         switch (platform, type) {
         case (.admob, .interstitial):
             return AdmobInterstitial(context: self.context, callbackDelegate: self)
+        case (.admob, .rewarded):
+            return AdmobRewarded(context: self.context, callbackDelegate: self)
         default:
           return nil
         }
@@ -113,6 +115,11 @@ class FullScreenAdSelector: FullscreenAdSelector, FullscreenAdCallback {
         print("FullScreenAdSelector \(#function) \(platform) \(type)")
         self.delegate?.onClose(id: id, platform: platform, type: type)
         self.clear(id: id)
+    }
+    
+    func onRewarded(id: String, platform: AdPlatform, type: FullScreenAdType, amount: Double?) {
+        print("FullScreenAdSelector \(#function) \(platform) \(type)")
+        self.delegate?.onRewarded(id: id, platform: platform, type: type, amount: amount)
     }
     
     func onException(id: String, platform: AdPlatform, type: FullScreenAdType, error: String) {

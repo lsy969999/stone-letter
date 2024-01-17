@@ -27,6 +27,7 @@
 		3DBAC6562B57F60200BDADD6 /* AppLovinBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBAC6552B57F60200BDADD6 /* AppLovinBanner.swift */; };
 		3DBAC6582B5832E400BDADD6 /* AdTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBAC6572B5832E400BDADD6 /* AdTestView.swift */; };
 		3DBAC65B2B58345700BDADD6 /* StoneLetterAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBAC65A2B58345700BDADD6 /* StoneLetterAd.swift */; };
+		3DBAC65D2B5855B100BDADD6 /* AdmobRewarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBAC65C2B5855B100BDADD6 /* AdmobRewarded.swift */; };
 		E8D5B073F68CB7071B9F242D /* Pods_stone_letter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D8B9A60F60EA3DCC607A8F /* Pods_stone_letter.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		3DBAC6552B57F60200BDADD6 /* AppLovinBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLovinBanner.swift; sourceTree = "<group>"; };
 		3DBAC6572B5832E400BDADD6 /* AdTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdTestView.swift; sourceTree = "<group>"; };
 		3DBAC65A2B58345700BDADD6 /* StoneLetterAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoneLetterAd.swift; sourceTree = "<group>"; };
+		3DBAC65C2B5855B100BDADD6 /* AdmobRewarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdmobRewarded.swift; sourceTree = "<group>"; };
 		A5D8B9A60F60EA3DCC607A8F /* Pods_stone_letter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stone_letter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE750FDB20F55FA24F260C6 /* Pods-stone-letter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stone-letter.debug.xcconfig"; path = "Target Support Files/Pods-stone-letter/Pods-stone-letter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				3DBAC64E2B57F5CA00BDADD6 /* AdmobInterstitial.swift */,
+				3DBAC65C2B5855B100BDADD6 /* AdmobRewarded.swift */,
 			);
 			path = Admob;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				3DBAC60E2B57DD4E00BDADD6 /* ContentView.swift in Sources */,
 				3DBAC60C2B57DD4E00BDADD6 /* stone_letterApp.swift in Sources */,
 				3DBAC6512B57F5D600BDADD6 /* ApplovinInterstitial.swift in Sources */,
+				3DBAC65D2B5855B100BDADD6 /* AdmobRewarded.swift in Sources */,
 				3DBAC63E2B57F24500BDADD6 /* AdInterface.swift in Sources */,
 				3DBAC6562B57F60200BDADD6 /* AppLovinBanner.swift in Sources */,
 				3DBAC6542B57F5F800BDADD6 /* AdmobBanner.swift in Sources */,

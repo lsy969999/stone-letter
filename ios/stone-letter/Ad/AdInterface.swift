@@ -22,6 +22,7 @@ protocol FullscreenAdCallback {
     func onOpen(id: String, platform: AdPlatform, type: FullScreenAdType)
     func onClick(id: String, platform: AdPlatform, type: FullScreenAdType)
     func onClose(id: String, platform: AdPlatform, type: FullScreenAdType)
+    func onRewarded(id: String, platform: AdPlatform, type: FullScreenAdType, amount: Double?)
     func onException(id: String, platform: AdPlatform, type: FullScreenAdType, error: String)
 }
 
@@ -32,7 +33,6 @@ protocol AdFunction {
 
     func load(adKey: String)
     func show()
-    func clear()
 }
 
 protocol FullScreenAd: AdFunction{

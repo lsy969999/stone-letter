@@ -15,14 +15,22 @@ class StoneLetterAd: ObservableObject {
         self.adSelector = FullScreenAdSelector(context: rootVC!);
     }
     
-    func load(adKey: String){
-        self.adSelector.load(platform: .admob, type: .interstitial, adKey: adKey)
+    func load(platform: AdPlatform, type: FullScreenAdType, adKey: String){
+        self.adSelector.load(platform: platform, type: type, adKey: adKey)
     }
     
-    func show(){
-        let loaded = self.adSelector.info().filter{$0.status == .loaded}
-        let id = loaded.first!.id
-        self.adSelector.show(id: id)
+    func show(platform: AdPlatform, type: FullScreenAdType){
+        let loaded = self.adSelector.info().filter{$0.status == .loaded && $0.platform == platform && $0.type == type}
+        if let id = loaded.first?.id {
+            self.adSelector.show(id: id)
+        }
+    }
+    
+    func info() {
+        let info = adSelector.info()
+        info.forEach{
+            print("info \($0)")
+        }
     }
 }
 extension UIApplication {
