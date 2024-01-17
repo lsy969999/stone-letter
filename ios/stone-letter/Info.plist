@@ -4,5 +4,9 @@
 <dict>
 	<key>TEST</key>
 	<string>$(TEST)</string>
+	<key>FIREBASE_OPTIONS_PATH</key>
+	<string>$(FIREBASE_OPTIONS_PATH)</string>
+	<key>ENV</key>
+	<string>$(ENV)</string>
 </dict>
 </plist>

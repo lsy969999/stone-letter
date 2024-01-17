@@ -73,11 +73,11 @@
 			isa = PBXGroup;
 			children = (
 				3DBAC6372B57E2EF00BDADD6 /* Info.plist */,
+				3DBAC6382B57E31400BDADD6 /* Constant.swift */,
 				3DBAC60B2B57DD4E00BDADD6 /* stone_letterApp.swift */,
 				3DBAC60D2B57DD4E00BDADD6 /* ContentView.swift */,
 				3DBAC60F2B57DD4E00BDADD6 /* Assets.xcassets */,
 				3DBAC6112B57DD4E00BDADD6 /* Preview Content */,
-				3DBAC6382B57E31400BDADD6 /* Constant.swift */,
 			);
 			path = "stone-letter";
 			sourceTree = "<group>";
