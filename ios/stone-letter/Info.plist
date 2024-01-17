@@ -2,11 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>TEST</key>
-	<string>$(TEST)</string>
-	<key>FIREBASE_OPTIONS_PATH</key>
-	<string>$(FIREBASE_OPTIONS_PATH)</string>
 	<key>ENV</key>
 	<string>$(ENV)</string>
+	<key>FIREBASE_OPTIONS_PATH</key>
+	<string>$(FIREBASE_OPTIONS_PATH)</string>
+	<key>GADApplicationIdentifier</key>
+	<string>$(GADApplicationIdentifier)</string>
+	<key>TEST</key>
+	<string>$(TEST)</string>
 </dict>
 </plist>
