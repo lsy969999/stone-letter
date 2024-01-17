@@ -8,7 +8,6 @@
 import Foundation
 
 protocol FullscreenAdSelector {
-    
     func able(platform: AdPlatform, type: FullScreenAdType) -> Bool
     func load(platform: AdPlatform, type: FullScreenAdType, adKey: String)
     func show(id: String)
@@ -24,6 +23,23 @@ protocol FullscreenAdCallback {
     func onClose(id: String, platform: AdPlatform, type: FullScreenAdType)
     func onRewarded(id: String, platform: AdPlatform, type: FullScreenAdType, amount: Double?)
     func onException(id: String, platform: AdPlatform, type: FullScreenAdType, error: String)
+}
+
+protocol BannerAdSelector {
+    func able(platform: AdPlatform, type: BannerAdType) -> Bool
+    func load(platform: AdPlatform, type: BannerAdType, adKey: String)
+    func show(id: String)
+    func info() -> [BannerAdInfo]
+    func clear(id: String)
+}
+
+protocol BannerAdCallback {
+    func onLoadSuccess(id: String, platform: AdPlatform, type: BannerAdType)
+    func onLoadFail(id: String, platform: AdPlatform, type: BannerAdType, error: String)
+    func onOpen(id: String, platform: AdPlatform, type: BannerAdType)
+    func onClick(id: String, platform: AdPlatform, type: BannerAdType)
+    func onClose(id: String, platform: AdPlatform, type: BannerAdType)
+    func onException(id: String, platform: AdPlatform, type: BannerAdType, error: String)
 }
 
 protocol AdFunction {
@@ -45,6 +61,14 @@ protocol BannerAd: AdFunction {
 }
 
 struct FullScreenAdInfo {
+    let id: String
+    let platform: AdPlatform
+    let type: FullScreenAdType
+    let status: AdStatus
+    let adLoaded: Int?
+}
+
+struct BannerAdInfo {
     let id: String
     let platform: AdPlatform
     let type: FullScreenAdType

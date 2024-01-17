@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class FullScreenAdSelector: FullscreenAdSelector, FullscreenAdCallback {
+class FullScreenAdSelectorImpl: FullscreenAdSelector, FullscreenAdCallback {
     var context: UIViewController
     var fullScreenAds: [FullScreenAd] = [];
     var delegate: FullscreenAdCallback?

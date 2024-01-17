@@ -19,8 +19,8 @@
 		3DBAC6392B57E31400BDADD6 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBAC6382B57E31400BDADD6 /* Constant.swift */; };
 		3DBAC63C2B57F0E000BDADD6 /* AdType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBAC63B2B57F0E000BDADD6 /* AdType.swift */; };
 		3DBAC63E2B57F24500BDADD6 /* AdInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBAC63D2B57F24500BDADD6 /* AdInterface.swift */; };
-		3DBAC64A2B57F44C00BDADD6 /* FullScreenAdSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBAC6492B57F44C00BDADD6 /* FullScreenAdSelector.swift */; };
-		3DBAC64C2B57F5A200BDADD6 /* BannerAdSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBAC64B2B57F5A200BDADD6 /* BannerAdSelector.swift */; };
+		3DBAC64A2B57F44C00BDADD6 /* FullScreenAdSelectorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBAC6492B57F44C00BDADD6 /* FullScreenAdSelectorImpl.swift */; };
+		3DBAC64C2B57F5A200BDADD6 /* BannerAdSelectorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBAC64B2B57F5A200BDADD6 /* BannerAdSelectorImpl.swift */; };
 		3DBAC64F2B57F5CA00BDADD6 /* AdmobInterstitial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBAC64E2B57F5CA00BDADD6 /* AdmobInterstitial.swift */; };
 		3DBAC6512B57F5D600BDADD6 /* ApplovinInterstitial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBAC6502B57F5D600BDADD6 /* ApplovinInterstitial.swift */; };
 		3DBAC6542B57F5F800BDADD6 /* AdmobBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBAC6532B57F5F800BDADD6 /* AdmobBanner.swift */; };
@@ -47,8 +47,8 @@
 		3DBAC6382B57E31400BDADD6 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		3DBAC63B2B57F0E000BDADD6 /* AdType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdType.swift; sourceTree = "<group>"; };
 		3DBAC63D2B57F24500BDADD6 /* AdInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdInterface.swift; sourceTree = "<group>"; };
-		3DBAC6492B57F44C00BDADD6 /* FullScreenAdSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenAdSelector.swift; sourceTree = "<group>"; };
-		3DBAC64B2B57F5A200BDADD6 /* BannerAdSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdSelector.swift; sourceTree = "<group>"; };
+		3DBAC6492B57F44C00BDADD6 /* FullScreenAdSelectorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenAdSelectorImpl.swift; sourceTree = "<group>"; };
+		3DBAC64B2B57F5A200BDADD6 /* BannerAdSelectorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdSelectorImpl.swift; sourceTree = "<group>"; };
 		3DBAC64E2B57F5CA00BDADD6 /* AdmobInterstitial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdmobInterstitial.swift; sourceTree = "<group>"; };
 		3DBAC6502B57F5D600BDADD6 /* ApplovinInterstitial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplovinInterstitial.swift; sourceTree = "<group>"; };
 		3DBAC6532B57F5F800BDADD6 /* AdmobBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdmobBanner.swift; sourceTree = "<group>"; };
@@ -174,7 +174,7 @@
 		3DBAC6412B57F32F00BDADD6 /* FullScreen */ = {
 			isa = PBXGroup;
 			children = (
-				3DBAC6492B57F44C00BDADD6 /* FullScreenAdSelector.swift */,
+				3DBAC6492B57F44C00BDADD6 /* FullScreenAdSelectorImpl.swift */,
 				3DBAC63F2B57F2F700BDADD6 /* Admob */,
 				3DBAC6402B57F31000BDADD6 /* AppLovin */,
 			);
@@ -184,7 +184,7 @@
 		3DBAC6422B57F34100BDADD6 /* Banner */ = {
 			isa = PBXGroup;
 			children = (
-				3DBAC64B2B57F5A200BDADD6 /* BannerAdSelector.swift */,
+				3DBAC64B2B57F5A200BDADD6 /* BannerAdSelectorImpl.swift */,
 				3DBAC64D2B57F5AC00BDADD6 /* Admob */,
 				3DBAC6522B57F5E200BDADD6 /* AppLovin */,
 			);
@@ -354,7 +354,7 @@
 				3DBAC63C2B57F0E000BDADD6 /* AdType.swift in Sources */,
 				3DBAC64F2B57F5CA00BDADD6 /* AdmobInterstitial.swift in Sources */,
 				3DBAC65B2B58345700BDADD6 /* StoneLetterAd.swift in Sources */,
-				3DBAC64A2B57F44C00BDADD6 /* FullScreenAdSelector.swift in Sources */,
+				3DBAC64A2B57F44C00BDADD6 /* FullScreenAdSelectorImpl.swift in Sources */,
 				3DBAC60E2B57DD4E00BDADD6 /* ContentView.swift in Sources */,
 				3DBAC60C2B57DD4E00BDADD6 /* stone_letterApp.swift in Sources */,
 				3DBAC6512B57F5D600BDADD6 /* ApplovinInterstitial.swift in Sources */,
@@ -363,7 +363,7 @@
 				3DBAC6562B57F60200BDADD6 /* AppLovinBanner.swift in Sources */,
 				3DBAC6542B57F5F800BDADD6 /* AdmobBanner.swift in Sources */,
 				3DBAC6392B57E31400BDADD6 /* Constant.swift in Sources */,
-				3DBAC64C2B57F5A200BDADD6 /* BannerAdSelector.swift in Sources */,
+				3DBAC64C2B57F5A200BDADD6 /* BannerAdSelectorImpl.swift in Sources */,
 				3DBAC6582B5832E400BDADD6 /* AdTestView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

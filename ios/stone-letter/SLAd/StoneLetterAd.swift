@@ -8,11 +8,11 @@
 import Foundation
 import UIKit
 class StoneLetterAd: ObservableObject {
-    let adSelector: FullScreenAdSelector
+    let adSelector: FullScreenAdSelectorImpl
     
     init() {
         let rootVC = UIApplication.shared.firstKeyWindow?.rootViewController
-        self.adSelector = FullScreenAdSelector(context: rootVC!);
+        self.adSelector = FullScreenAdSelectorImpl(context: rootVC!);
     }
     
     func load(platform: AdPlatform, type: FullScreenAdType, adKey: String){
