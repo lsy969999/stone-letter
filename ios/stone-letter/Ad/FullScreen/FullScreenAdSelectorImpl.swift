@@ -61,6 +61,14 @@ class FullScreenAdSelectorImpl: FullscreenAdSelector, FullscreenAdCallback {
         return self.fullScreenAds.map{ $0.info() }
     }
     
+    func clear(id: String) {
+        for (index, ad) in self.fullScreenAds.enumerated(){
+            if ad.id == id {
+                self.fullScreenAds.remove(at: index)
+            }
+        }
+    }
+    
     private func findById(id: String) -> FullScreenAd? {
         return self.fullScreenAds.first{$0.id == id}
     }
@@ -80,14 +88,6 @@ class FullScreenAdSelectorImpl: FullscreenAdSelector, FullscreenAdCallback {
         return self.fullScreenAds
                     .filter{ $0.platform == platform && $0.type == type}
                     .count
-    }
-    
-    func clear(id: String) {
-        for (index, ad) in self.fullScreenAds.enumerated(){
-            if ad.id == id {
-                self.fullScreenAds.remove(at: index)
-            }
-        }
     }
     
     func onLoadSuccess(id: String, platform: AdPlatform, type: FullScreenAdType) {

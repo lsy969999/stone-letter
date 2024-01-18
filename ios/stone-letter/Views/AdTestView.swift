@@ -8,12 +8,18 @@
 import SwiftUI
 
 struct AdTestView: View {
-    @StateObject var ad = StoneLetterAd()
+    @StateObject var ad = StoneLetterFullScreenAd()
+    @StateObject var banner = StoneLetterBannerAd()
     var body: some View {
         Button(action: {
             ad.info()
         }, label: {
             Text("info")
+        })
+        Button(action: {
+            banner.info()
+        }, label: {
+            Text("bannerInfo")
         })
         Divider()
         Button(action: {
@@ -39,6 +45,19 @@ struct AdTestView: View {
             Text("Rewarded Show")
         })
         Divider()
+        Button(action: {
+//            banner.launch(platform: .admob, type: .banner, adKey: "ca-app-pub-3940256099942544/2934735716")
+        }, label: {
+            Text("Banner launch")
+        })
+        Button(action: {
+//            banner.remove(platform: .admob, type: .banner)
+        }, label: {
+            Text("Banner remove")
+        })
+        BannerAdView(viewModel: banner)
+        Divider()
+        BannerAdView(viewModel: banner)
     }
 }
 

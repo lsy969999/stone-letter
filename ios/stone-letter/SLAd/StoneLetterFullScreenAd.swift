@@ -7,8 +7,8 @@
 
 import Foundation
 import UIKit
-class StoneLetterAd: ObservableObject {
-    let adSelector: FullScreenAdSelectorImpl
+class StoneLetterFullScreenAd: ObservableObject {
+    let adSelector: FullscreenAdSelector
     
     init() {
         let rootVC = UIApplication.shared.firstKeyWindow?.rootViewController
@@ -31,21 +31,5 @@ class StoneLetterAd: ObservableObject {
         info.forEach{
             print("info \($0)")
         }
-    }
-}
-extension UIApplication {
-    var firstKeyWindow: UIWindow? {
-        // 1
-        let windowScenes = UIApplication.shared.connectedScenes
-            .compactMap { $0 as? UIWindowScene }
-        // 2
-        let activeScene = windowScenes
-            .filter { $0.activationState == .foregroundActive }
-        // 3
-        let firstActiveScene = activeScene.first
-        // 4
-        let keyWindow = firstActiveScene?.keyWindow
-        
-        return keyWindow
     }
 }

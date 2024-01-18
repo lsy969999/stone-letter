@@ -19,6 +19,9 @@ struct ContentView: View {
                 NavigationLink(destination: AdTestView()){
                     Text("ad test view")
                 }
+                NavigationLink(destination: LoginTestView()){
+                    Text("login test view")
+                }
 
             }
             .padding()

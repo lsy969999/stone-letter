@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol FullscreenAdSelector {
     func able(platform: AdPlatform, type: FullScreenAdType) -> Bool
@@ -27,10 +28,10 @@ protocol FullscreenAdCallback {
 
 protocol BannerAdSelector {
     func able(platform: AdPlatform, type: BannerAdType) -> Bool
-    func load(platform: AdPlatform, type: BannerAdType, adKey: String)
-    func show(id: String)
     func info() -> [BannerAdInfo]
-    func clear(id: String)
+    
+    func launch(context: UIViewController, platform: AdPlatform, type: BannerAdType, adKey: String)
+    func remove(id: String)
 }
 
 protocol BannerAdCallback {
@@ -42,22 +43,23 @@ protocol BannerAdCallback {
     func onException(id: String, platform: AdPlatform, type: BannerAdType, error: String)
 }
 
-protocol AdFunction {
+protocol FullScreenAd{
     var id: String { get set }
     var platform: AdPlatform { get };
     var status: AdStatus { get set };
-
+    var type: FullScreenAdType { get };
     func load(adKey: String)
     func show()
-}
-
-protocol FullScreenAd: AdFunction{
-    var type: FullScreenAdType { get };
     func info() -> FullScreenAdInfo
 }
 
-protocol BannerAd: AdFunction {
+protocol BannerAd {
+    var id: String { get set }
+    var platform: AdPlatform { get };
+    var status: AdStatus { get set };
     var type: BannerAdType { get };
+    func info() -> BannerAdInfo
+    func launch(context: UIViewController, adKey: String)
 }
 
 struct FullScreenAdInfo {
@@ -71,7 +73,7 @@ struct FullScreenAdInfo {
 struct BannerAdInfo {
     let id: String
     let platform: AdPlatform
-    let type: FullScreenAdType
+    let type: BannerAdType
     let status: AdStatus
     let adLoaded: Int?
 }

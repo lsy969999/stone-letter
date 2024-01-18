@@ -26,8 +26,13 @@
 		3DBAC6542B57F5F800BDADD6 /* AdmobBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBAC6532B57F5F800BDADD6 /* AdmobBanner.swift */; };
 		3DBAC6562B57F60200BDADD6 /* AppLovinBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBAC6552B57F60200BDADD6 /* AppLovinBanner.swift */; };
 		3DBAC6582B5832E400BDADD6 /* AdTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBAC6572B5832E400BDADD6 /* AdTestView.swift */; };
-		3DBAC65B2B58345700BDADD6 /* StoneLetterAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBAC65A2B58345700BDADD6 /* StoneLetterAd.swift */; };
+		3DBAC65B2B58345700BDADD6 /* StoneLetterFullScreenAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBAC65A2B58345700BDADD6 /* StoneLetterFullScreenAd.swift */; };
 		3DBAC65D2B5855B100BDADD6 /* AdmobRewarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBAC65C2B5855B100BDADD6 /* AdmobRewarded.swift */; };
+		3DBAC6602B58FC9900BDADD6 /* AppleLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBAC65F2B58FC9900BDADD6 /* AppleLogin.swift */; };
+		3DBAC6632B58FDED00BDADD6 /* LoginTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBAC6622B58FDED00BDADD6 /* LoginTestView.swift */; };
+		3DBAC6652B59022E00BDADD6 /* StoneLetterBannerAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBAC6642B59022E00BDADD6 /* StoneLetterBannerAd.swift */; };
+		3DBAC6672B59024C00BDADD6 /* UIApplication+RootWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBAC6662B59024C00BDADD6 /* UIApplication+RootWindow.swift */; };
+		3DBAC6692B59028C00BDADD6 /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBAC6682B59028C00BDADD6 /* BannerAdView.swift */; };
 		E8D5B073F68CB7071B9F242D /* Pods_stone_letter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D8B9A60F60EA3DCC607A8F /* Pods_stone_letter.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,8 +59,13 @@
 		3DBAC6532B57F5F800BDADD6 /* AdmobBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdmobBanner.swift; sourceTree = "<group>"; };
 		3DBAC6552B57F60200BDADD6 /* AppLovinBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLovinBanner.swift; sourceTree = "<group>"; };
 		3DBAC6572B5832E400BDADD6 /* AdTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdTestView.swift; sourceTree = "<group>"; };
-		3DBAC65A2B58345700BDADD6 /* StoneLetterAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoneLetterAd.swift; sourceTree = "<group>"; };
+		3DBAC65A2B58345700BDADD6 /* StoneLetterFullScreenAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoneLetterFullScreenAd.swift; sourceTree = "<group>"; };
 		3DBAC65C2B5855B100BDADD6 /* AdmobRewarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdmobRewarded.swift; sourceTree = "<group>"; };
+		3DBAC65F2B58FC9900BDADD6 /* AppleLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLogin.swift; sourceTree = "<group>"; };
+		3DBAC6622B58FDED00BDADD6 /* LoginTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTestView.swift; sourceTree = "<group>"; };
+		3DBAC6642B59022E00BDADD6 /* StoneLetterBannerAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoneLetterBannerAd.swift; sourceTree = "<group>"; };
+		3DBAC6662B59024C00BDADD6 /* UIApplication+RootWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+RootWindow.swift"; sourceTree = "<group>"; };
+		3DBAC6682B59028C00BDADD6 /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
 		A5D8B9A60F60EA3DCC607A8F /* Pods_stone_letter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stone_letter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE750FDB20F55FA24F260C6 /* Pods-stone-letter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stone-letter.debug.xcconfig"; path = "Target Support Files/Pods-stone-letter/Pods-stone-letter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,15 +104,16 @@
 		3DBAC60A2B57DD4E00BDADD6 /* stone-letter */ = {
 			isa = PBXGroup;
 			children = (
+				3DBAC6612B58FDCE00BDADD6 /* Views */,
+				3DBAC65E2B58FC8900BDADD6 /* Auth */,
 				3DBAC6592B58344A00BDADD6 /* SLAd */,
 				3DBAC63A2B57F0CA00BDADD6 /* Ad */,
 				3DBAC6372B57E2EF00BDADD6 /* Info.plist */,
 				3DBAC6382B57E31400BDADD6 /* Constant.swift */,
 				3DBAC60B2B57DD4E00BDADD6 /* stone_letterApp.swift */,
-				3DBAC60D2B57DD4E00BDADD6 /* ContentView.swift */,
 				3DBAC60F2B57DD4E00BDADD6 /* Assets.xcassets */,
 				3DBAC6112B57DD4E00BDADD6 /* Preview Content */,
-				3DBAC6572B5832E400BDADD6 /* AdTestView.swift */,
+				3DBAC6662B59024C00BDADD6 /* UIApplication+RootWindow.swift */,
 			);
 			path = "stone-letter";
 			sourceTree = "<group>";
@@ -185,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				3DBAC64B2B57F5A200BDADD6 /* BannerAdSelectorImpl.swift */,
+				3DBAC6682B59028C00BDADD6 /* BannerAdView.swift */,
 				3DBAC64D2B57F5AC00BDADD6 /* Admob */,
 				3DBAC6522B57F5E200BDADD6 /* AppLovin */,
 			);
@@ -210,9 +222,28 @@
 		3DBAC6592B58344A00BDADD6 /* SLAd */ = {
 			isa = PBXGroup;
 			children = (
-				3DBAC65A2B58345700BDADD6 /* StoneLetterAd.swift */,
+				3DBAC65A2B58345700BDADD6 /* StoneLetterFullScreenAd.swift */,
+				3DBAC6642B59022E00BDADD6 /* StoneLetterBannerAd.swift */,
 			);
 			path = SLAd;
+			sourceTree = "<group>";
+		};
+		3DBAC65E2B58FC8900BDADD6 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				3DBAC65F2B58FC9900BDADD6 /* AppleLogin.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		3DBAC6612B58FDCE00BDADD6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3DBAC60D2B57DD4E00BDADD6 /* ContentView.swift */,
+				3DBAC6572B5832E400BDADD6 /* AdTestView.swift */,
+				3DBAC6622B58FDED00BDADD6 /* LoginTestView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		6BE79C8986A046333F0840BC /* Frameworks */ = {
@@ -353,18 +384,23 @@
 			files = (
 				3DBAC63C2B57F0E000BDADD6 /* AdType.swift in Sources */,
 				3DBAC64F2B57F5CA00BDADD6 /* AdmobInterstitial.swift in Sources */,
-				3DBAC65B2B58345700BDADD6 /* StoneLetterAd.swift in Sources */,
+				3DBAC6632B58FDED00BDADD6 /* LoginTestView.swift in Sources */,
+				3DBAC65B2B58345700BDADD6 /* StoneLetterFullScreenAd.swift in Sources */,
 				3DBAC64A2B57F44C00BDADD6 /* FullScreenAdSelectorImpl.swift in Sources */,
+				3DBAC6602B58FC9900BDADD6 /* AppleLogin.swift in Sources */,
 				3DBAC60E2B57DD4E00BDADD6 /* ContentView.swift in Sources */,
 				3DBAC60C2B57DD4E00BDADD6 /* stone_letterApp.swift in Sources */,
 				3DBAC6512B57F5D600BDADD6 /* ApplovinInterstitial.swift in Sources */,
 				3DBAC65D2B5855B100BDADD6 /* AdmobRewarded.swift in Sources */,
 				3DBAC63E2B57F24500BDADD6 /* AdInterface.swift in Sources */,
 				3DBAC6562B57F60200BDADD6 /* AppLovinBanner.swift in Sources */,
+				3DBAC6672B59024C00BDADD6 /* UIApplication+RootWindow.swift in Sources */,
 				3DBAC6542B57F5F800BDADD6 /* AdmobBanner.swift in Sources */,
+				3DBAC6692B59028C00BDADD6 /* BannerAdView.swift in Sources */,
 				3DBAC6392B57E31400BDADD6 /* Constant.swift in Sources */,
 				3DBAC64C2B57F5A200BDADD6 /* BannerAdSelectorImpl.swift in Sources */,
 				3DBAC6582B5832E400BDADD6 /* AdTestView.swift in Sources */,
+				3DBAC6652B59022E00BDADD6 /* StoneLetterBannerAd.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
